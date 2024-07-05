@@ -1,0 +1,116 @@
+body,
+p {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+@keyframes blink {
+	0% {
+		background-color: #408000;
+	}
+	50% {
+		background-color: #40800030;
+	}
+	100% {
+		background-color: #408000;
+	}
+}
+
+.canvas {
+	width: 100vw;
+	height: 100vh;
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.score {
+	width: 190px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	color: #000;
+}
+
+.score_string span:first-child {
+	margin-right: 5px;
+}
+
+.score_best{
+	display: none;
+}
+.score_best.active {
+	display: inline;
+}
+
+.field {
+	font-size: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: 2px solid #999;
+	background: whitesmoke;
+}
+
+.no_cursor {
+	cursor: none;
+}
+
+.cell {
+	box-sizing: border-box;
+	width: 2em;
+	height: 2em;
+	border: 1px dotted #11111130;
+}
+
+.snake {
+	background-color: #0aa00a;
+}
+
+.snake.head {
+	background-color: #bb0909;
+}
+
+.mouse {
+	background-color: #8f8f8f;
+	border-radius: 50%;
+}
+
+.snake-fail {
+	animation: blink 0.5s infinite;
+}
+
+.game-over {
+	width: 21em;
+	padding: 20px;
+	background-color: #000;
+	border: 2px solid #fff;
+	text-transform: uppercase;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.game-over.active {
+	display: flex;
+}
+
+.game-over p {
+	font-size: 1.6em;
+}
+
+.btn-reset {
+	font-size: 1em;
+	margin-top: 20px;
+	padding: 0.5em 1em;
+	cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Змейка</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<div class="canvas">
+		<div class="score">
+			<p class="score_string">
+				<span>Счёт:</span><span id="score_curr">0</span>
+			</p>
+			<p class="score_string score_best">
+				<span>Рекорд:</span><span id="score_best">0</span>
+			</p>
+		</div>
+		<div class="field"></div>
+	</div>
+	<div class="game-over">
+		<p>Game over</p>
+		<button class="btn-reset">Ещё разок?</button>
+	</div>
+
+	<script type="module" src="./Game.js"></script>
+</body>
+</html>
